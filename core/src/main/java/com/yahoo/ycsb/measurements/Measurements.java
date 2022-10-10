@@ -91,6 +91,9 @@ public class Measurements
         {
             _measurementType = 3;
         }
+        else if (mTypeString.equals("raw")) {
+            _measurementType = 4;
+        }
         else {
             throw new IllegalArgumentException("unknown "+MEASUREMENT_TYPE_PROPERTY+"="+mTypeString);
         }
@@ -125,6 +128,8 @@ public class Measurements
                 return new TwoInOneMeasurement(name,
                         new OneMeasurementHdrHistogram("Hdr"+name, _props),
                         new OneMeasurementHistogram("Bucket"+name, _props));
+            case 4:
+                return new OneMeasurementRaw(name, _props);
             default:
                 return new OneMeasurementTimeSeries(name, _props);
         }
