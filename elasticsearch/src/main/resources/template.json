@@ -1,0 +1,43 @@
+{
+  "template": "*",
+  "settings": {
+    "index": {
+      "refresh_interval": "-1"
+    }
+  },
+  "mappings": {
+    "_default_": {
+      "_all": {
+        "enabled": false
+      },
+      "_source": {
+        "enabled": false
+      },
+      "properties": {
+        "timestamp": {
+          "type": "date",
+          "format": "epoch_millis",
+          "doc_values": true
+        },
+        "value": {
+          "type": "double",
+          "index": "no",
+          "doc_values": true
+        }
+      },
+      "dynamic_templates": [
+        {
+          "tags": {
+            "match": "*",
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "string",
+              "index": "not_analyzed",
+              "doc_values": true
+            }
+          }
+        }
+      ]
+    }
+  }
+}

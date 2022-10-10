@@ -1,0 +1,10 @@
+-- Create the usermetric table with 10 fields and 1 double value and Timestamp as key
+CREATE TABLE test.usermetric(
+  ID INT AUTO_INCREMENT PRIMARY KEY,
+  YCSB_KEY TIMESTAMP,
+  VALUE DOUBLE,
+  TAG0 TEXT, TAG1 TEXT,
+  TAG2 TEXT, TAG3 TEXT,
+  TAG4 TEXT, TAG5 TEXT,
+  TAG6 TEXT, TAG7 TEXT,
+  TAG8 TEXT, TAG9 TEXT);

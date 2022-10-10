@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.yahoo.ycsb</groupId>
+		<artifactId>binding-parent</artifactId>
+		<version>0.4.0</version>
+		<relativePath>../binding-parent</relativePath>
+	</parent>
+	<artifactId>kdbplus-binding</artifactId>
+	<name>kdb+ Binding</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.yahoo.ycsb</groupId>
+			<artifactId>core</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.yahoo.ycsb</groupId>
+			<artifactId>kdbplus-java</artifactId>
+			<version>2015-08-13</version>
+		</dependency>
+	</dependencies>
+
+</project>
